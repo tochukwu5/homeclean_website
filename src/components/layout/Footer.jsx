@@ -31,8 +31,8 @@ export default function Footer() {
           {/* Brand */}
           <div className="lg:col-span-1">
             <Link to="/" className="flex items-center gap-2.5 mb-4">
-              <div className="w-9 h-9 bg-primary-500 rounded-xl flex items-center justify-center text-white font-bold">C</div>
-              <span className="font-heading font-bold text-xl">Clean<span className="text-primary-400">Home</span></span>
+              <div className="w-9 h-9 bg-primary-500 rounded-xl flex items-center justify-center text-white font-bold">P</div>
+              <span className="font-heading font-bold text-xl">Perth<span className="text-primary-400">Kleeners</span></span>
             </Link>
             <p className="text-gray-400 text-sm leading-relaxed mb-5">
               Professional cleaning services you can trust. Vetted cleaners, instant quotes, flexible bookings.
@@ -105,7 +105,7 @@ export default function Footer() {
       {/* Bottom Bar */}
       <div className="border-t border-white/10">
         <div className="container-custom py-5 flex flex-col sm:flex-row items-center justify-between gap-3 text-sm text-gray-500">
-          <p>© {new Date().getFullYear()} CleanHome. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Perth Kleeners. All rights reserved.</p>
           <div className="flex gap-5">
             <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
             <a href="#" className="hover:text-white transition-colors">Terms of Service</a>

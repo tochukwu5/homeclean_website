@@ -1,4 +1,4 @@
-# CleanHome — Professional Cleaning Website
+# Perth Kleeners — Professional Cleaning Website
 
 A modern, responsive React + Tailwind CSS cleaning service website.
 
@@ -96,10 +96,10 @@ src/
 Edit `src/data/siteData.js`:
 ```js
 export const SITE = {
-  name: 'CleanHome',
+  name: 'Perth Kleeners',
   phone: '+1 (555) 234-5678',
   whatsapp: '15552345678',   // ← your WhatsApp number
-  email: 'hello@cleanhome.com',
+  email: 'hello@Perth Kleeners.com',
   address: '123 Main St...',
 }
 ```

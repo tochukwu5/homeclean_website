@@ -1,9 +1,11 @@
 export const SITE = {
-  name: 'CleanHome',
+  name: 'Perth Kleeners',
   tagline: 'Your space, spotless.',
-  phone: '+1 (555) 234-5678',
-  whatsapp: '15552345678',
-  email: 'hello@cleanhome.com',
+  // phone: '+2347088679581',
+  phone: '0466096962',
+  whatsapp: '0466096962',
+  // email: 'tochukwud750@gmail.com',
+  email: 'Osaz.ebez@hotmail.com',
   address: '123 Sparkle Street, Clean City, CC 10001',
   hours: 'Mon–Sat: 7am – 7pm',
 }
@@ -12,7 +14,7 @@ export const SERVICES = [
   {
     id: 'standard',
     icon: '🏠',
-    title: 'Standard Cleaning',
+    title: 'home Cleaning',
     description: 'Regular cleaning to keep your home fresh and tidy every week or fortnight.',
     features: ['Dusting all surfaces', 'Vacuuming & mopping', 'Bathroom sanitizing', 'Kitchen wipe-down', 'Trash removal'],
     price: 'From $80',
@@ -118,10 +120,10 @@ export const TESTIMONIALS = [
     name: 'Priya K.',
     location: 'Northbridge',
     rating: 5,
-    text: 'I\'ve tried 3 cleaning companies before CleanHome. None of them come close. The quote calculator was super easy and the cleaner was amazing.',
+    text: 'I\'ve tried 3 cleaning companies before Perth Kleeners. None of them come close. The quote calculator was super easy and the cleaner was amazing.',
     avatar: 'PK',
     color: 'bg-purple-500',
-    service: 'Standard Cleaning',
+    service: 'home Cleaning',
   },
   {
     id: 4,
@@ -141,7 +143,7 @@ export const TESTIMONIALS = [
     text: 'Booked same-day and the cleaner arrived exactly on time. She was so thorough with the kitchen — it literally sparkled. 10/10!',
     avatar: 'FA',
     color: 'bg-pink-500',
-    service: 'Standard Cleaning',
+    service: 'home Cleaning',
   },
   {
     id: 6,
@@ -209,7 +211,7 @@ export const NAV_LINKS = [
 
 export const FOOTER_LINKS = {
   services: [
-    { label: 'Standard Cleaning', path: '/services' },
+    { label: 'home Cleaning', path: '/services' },
     { label: 'Deep Cleaning', path: '/services' },
     { label: 'Office Cleaning', path: '/services' },
     { label: 'Move In/Out', path: '/services' },

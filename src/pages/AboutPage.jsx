@@ -22,8 +22,8 @@ export default function AboutPage() {
     <>
       <PageHero
         breadcrumb="Our Story"
-        title="About CleanHome"
-        subtitle="We started CleanHome because everyone deserves a clean space without the hassle."
+        title="About Perth Kleeners"
+        subtitle="We started Perth Kleeners because everyone deserves a clean space without the hassle."
       />
 
       {/* Story */}
@@ -38,7 +38,7 @@ export default function AboutPage() {
               />
               <div className="space-y-4 text-gray-600 leading-relaxed mt-4">
                 <p>
-                  CleanHome was founded with one simple goal: to make professional home cleaning as easy as ordering food online. No phone tag. No wondering who's showing up. No confusing pricing.
+                  Perth Kleeners was founded with one simple goal: to make professional home cleaning as easy as ordering food online. No phone tag. No wondering who's showing up. No confusing pricing.
                 </p>
                 <p>
                   We carefully vet every cleaner on our platform — background checks, skills training, and ongoing quality reviews. When you book with us, you're getting a professional you can trust.

@@ -1,4 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-  <rect width="32" height="32" rx="8" fill="#00b496"/>
-  <text x="16" y="22" text-anchor="middle" font-size="18" font-family="sans-serif" font-weight="bold" fill="white">C</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <rect width="100" height="100" rx="22" fill="#00b496"/>
+  <text
+    x="50"
+    y="72"
+    text-anchor="middle"
+    font-size="68"
+    font-family="'Plus Jakarta Sans', 'DM Sans', Arial, sans-serif"
+    font-weight="700"
+    fill="white"
+  >P</text>
 </svg>
