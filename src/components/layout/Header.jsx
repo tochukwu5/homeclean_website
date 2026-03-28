@@ -44,7 +44,9 @@ function MobileDrawer({ open, onClose }) {
         {/* Header row */}
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '20px', borderBottom: '1px solid #f1f5f9' }}>
           <Link to="/" onClick={onClose} style={{ display: 'flex', alignItems: 'center', gap: '8px', textDecoration: 'none' }}>
-            <div style={{ width: 32, height: 32, background: '#00b496', borderRadius: 8, display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#fff', fontWeight: 700, fontSize: 16 }}>C</div>
+             <div className="w-9 h-9 rounded-xl overflow-hidden shadow-glow group-hover:scale-105 transition-transform">
+              <img src="/favicon15.svg" alt="Perth Kleeners" className="w-full h-full object-contain" />
+            </div>
             <span style={{ fontWeight: 700, fontSize: 18, color: '#0F1F1C', fontFamily: 'Plus Jakarta Sans, sans-serif' }}>
               Perth<span style={{ color: '#00b496' }}> Kleeners</span>
             </span>
@@ -63,8 +65,7 @@ function MobileDrawer({ open, onClose }) {
               end={path === '/'}
               onClick={onClose}
               className={({ isActive }) =>
-                `px-4 py-3 rounded-xl text-sm font-medium transition-colors ${
-                  isActive ? 'bg-primary-50 text-primary-600' : 'text-gray-700 hover:bg-gray-50'
+                `px-4 py-3 rounded-xl text-sm font-medium transition-colors ${isActive ? 'bg-primary-50 text-primary-600' : 'text-gray-700 hover:bg-gray-50'
                 }`
               }
             >
@@ -116,21 +117,19 @@ export default function Header() {
   return (
     <>
       <header
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          scrolled || !isHome
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled || !isHome
             ? 'bg-white/95 backdrop-blur-md shadow-md py-3'
             : 'bg-transparent py-5'
-        }`}
+          }`}
       >
         <div className="container-custom flex items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2.5 group">
-          <div className="w-9 h-9 rounded-xl overflow-hidden shadow-glow group-hover:scale-105 transition-transform">
-  <img src="/favicon15.svg" alt="Perth Kleeners" className="w-full h-full object-contain" />
-</div>
-            <span className={`font-heading font-bold text-xl tracking-tight transition-colors ${
-              scrolled || !isHome ? 'text-dark' : 'text-white'
-            }`}>
+            <div className="w-9 h-9 rounded-xl overflow-hidden shadow-glow group-hover:scale-105 transition-transform">
+              <img src="/favicon15.svg" alt="Perth Kleeners" className="w-full h-full object-contain" />
+            </div>
+            <span className={`font-heading font-bold text-xl tracking-tight transition-colors ${scrolled || !isHome ? 'text-dark' : 'text-white'
+              }`}>
               Perth<span className="text-primary-400"> Kleeners</span>
             </span>
           </Link>
@@ -143,10 +142,9 @@ export default function Header() {
                 to={path}
                 end={path === '/'}
                 className={({ isActive }) =>
-                  `px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
-                    isActive
-                      ? 'bg-primary-50 text-primary-600'
-                      : scrolled || !isHome
+                  `px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${isActive
+                    ? 'bg-primary-50 text-primary-600'
+                    : scrolled || !isHome
                       ? 'text-gray-600 hover:text-primary-600 hover:bg-primary-50'
                       : 'text-white/90 hover:text-white hover:bg-white/10'
                   }`
@@ -161,9 +159,8 @@ export default function Header() {
           <div className="hidden md:flex items-center gap-3">
             <a
               href={`tel:${SITE.phone}`}
-              className={`flex items-center gap-2 text-sm font-medium transition-colors ${
-                scrolled || !isHome ? 'text-gray-600 hover:text-primary-600' : 'text-white/90 hover:text-white'
-              }`}
+              className={`flex items-center gap-2 text-sm font-medium transition-colors ${scrolled || !isHome ? 'text-gray-600 hover:text-primary-600' : 'text-white/90 hover:text-white'
+                }`}
             >
               <FiPhone className="text-primary-400" />
               {SITE.phone}
@@ -176,9 +173,8 @@ export default function Header() {
           {/* Hamburger */}
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
-            className={`md:hidden p-2 rounded-lg transition-colors ${
-              scrolled || !isHome ? 'text-dark' : 'text-white'
-            }`}
+            className={`md:hidden p-2 rounded-lg transition-colors ${scrolled || !isHome ? 'text-dark' : 'text-white'
+              }`}
             aria-label="Toggle menu"
           >
             {mobileOpen ? <HiX size={24} /> : <HiMenu size={24} />}
