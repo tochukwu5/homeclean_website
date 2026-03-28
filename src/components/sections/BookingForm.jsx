@@ -34,18 +34,42 @@ export default function BookingForm({ prefillService = '', prefillPrice = '' }) 
     setStep(s => s + 1)
   }
 
+  // const handleSubmit = async (e) => {
+  //   e.preventDefault()
+  //   if (!form.name || !form.email || !form.phone || !form.address) {
+  //     toast.error('Please fill in all required fields.')
+  //     return
+  //   }
+  //   setLoading(true)
+  //   await new Promise(r => setTimeout(r, 1500))
+  //   setLoading(false)
+  //   setSubmitted(true)
+  //   toast.success('Booking confirmed! We\'ll be in touch shortly.')
+  // }
+
   const handleSubmit = async (e) => {
-    e.preventDefault()
-    if (!form.name || !form.email || !form.phone || !form.address) {
-      toast.error('Please fill in all required fields.')
-      return
+  e.preventDefault()
+  setLoading(true)
+  try {
+    const res = await fetch('/api/booking', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(form),
+    })
+    const data = await res.json()
+    if (data.success) {
+      toast.success('Message sent!')
+      setForm({ name: '', email: '', phone: '', message: '' })
+    } else {
+      toast.error(data.error || 'Something went wrong.')
     }
-    setLoading(true)
-    await new Promise(r => setTimeout(r, 1500))
-    setLoading(false)
-    setSubmitted(true)
-    toast.success('Booking confirmed! We\'ll be in touch shortly.')
+  } catch {
+    toast.error('Failed to send. Please try again.')
   }
+  setLoading(false)
+}
+
+ 
 
   if (submitted) {
     return (

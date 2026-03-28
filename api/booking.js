@@ -16,7 +16,7 @@ export default async function handler(req, res) {
   try {
     // Notify you (owner)
     await resend.emails.send({
-      from: 'CleanHome <onboarding@resend.dev>',
+      from: 'Perth Kleeners <onboarding@resend.dev>',
       to: process.env.OWNER_EMAIL,
       subject: `New Booking from ${name}`,
       html: `
@@ -40,7 +40,7 @@ export default async function handler(req, res) {
 
     // Confirmation to customer
     await resend.emails.send({
-      from: 'CleanHome <onboarding@resend.dev>',
+      from: 'Perth Kleeners <onboarding@resend.dev>',
       to: email,
       subject: `Booking Confirmed — ${service}`,
       html: `
@@ -56,7 +56,7 @@ export default async function handler(req, res) {
               <p style="margin:4px 0;"><strong>Time:</strong> ${time}</p>
               <p style="margin:4px 0;"><strong>Address:</strong> ${address || 'N/A'}</p>
             </div>
-            <p>See you soon!<br/><strong>The CleanHome Team</strong></p>
+            <p>See you soon!<br/><strong>The Perth Kleeners Team</strong></p>
           </div>
         </div>
       `,

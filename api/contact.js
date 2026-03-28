@@ -16,7 +16,7 @@ export default async function handler(req, res) {
   try {
     // Notify you (owner)
     await resend.emails.send({
-      from: 'CleanHome <onboarding@resend.dev>',
+      from: 'Perth Kleeners <onboarding@resend.dev>',
       to: process.env.OWNER_EMAIL,
       subject: `New Contact Message from ${name}`,
       html: `
@@ -37,7 +37,7 @@ export default async function handler(req, res) {
 
     // Auto-reply to customer
     await resend.emails.send({
-      from: 'CleanHome <onboarding@resend.dev>',
+      from: 'Perth Kleeners <onboarding@resend.dev>',
       to: email,
       subject: `Thanks for reaching out, ${name}!`,
       html: `
@@ -47,8 +47,8 @@ export default async function handler(req, res) {
           </div>
           <div style="background:#f9fafb;padding:24px;border-radius:0 0 12px 12px;border:1px solid #e5e7eb;">
             <p>Hi <strong>${name}</strong>,</p>
-            <p>Thanks for contacting CleanHome! We'll get back to you within <strong>24 hours</strong>.</p>
-            <p>Best regards,<br/><strong>The CleanHome Team</strong></p>
+            <p>Thanks for contacting Perth Kleeners! We'll get back to you within <strong>24 hours</strong>.</p>
+            <p>Best regards,<br/><strong>The Perth Kleeners Team</strong></p>
           </div>
         </div>
       `,
