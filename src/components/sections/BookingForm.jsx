@@ -58,7 +58,8 @@ export default function BookingForm({ prefillService = '', prefillPrice = '' }) 
     })
     const data = await res.json()
     if (data.success) {
-      toast.success('Message sent!')
+      toast.success('Booking confirmed! We\'ll be in touch shortly!.')
+      setSubmitted(true)
       setForm({ name: '', email: '', phone: '', message: '' })
     } else {
       toast.error(data.error || 'Something went wrong.')
