@@ -20,14 +20,41 @@ export default function ContactPage() {
 
   const update = (k, v) => setForm(p => ({ ...p, [k]: v }))
 
+  // const handleSubmit = async (e) => {
+  //   e.preventDefault()
+  //   setLoading(true)
+  //   await new Promise(r => setTimeout(r, 1200))
+  //   setLoading(false)
+  //   toast.success('Message sent! We\'ll get back to you within 24 hours.')
+  //   setForm({ name: '', email: '', phone: '', message: '' })
+  // }
+
   const handleSubmit = async (e) => {
-    e.preventDefault()
-    setLoading(true)
-    await new Promise(r => setTimeout(r, 1200))
-    setLoading(false)
-    toast.success('Message sent! We\'ll get back to you within 24 hours.')
-    setForm({ name: '', email: '', phone: '', message: '' })
+  e.preventDefault()
+  setLoading(true)
+  try {
+    const res = await fetch('/api/contact', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(form),
+    } )
+    console.log('Sent form data:', form)  
+    const data = await res.json()
+    if (data.success) {
+    console.log('Sent data:', data)  
+
+      toast.success('Message sent!')
+      setForm({ name: '', email: '', phone: '', message: '' })
+    } else {
+      toast.error(data.error || 'Something went wrong.')
+    console.log('Sent data:', data)  
+
+    }
+  } catch {
+    toast.error('Failed to send. Please try again.')
   }
+  setLoading(false)
+}
 
   return (
     <>

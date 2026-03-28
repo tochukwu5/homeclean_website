@@ -31,7 +31,7 @@ export default function HeroSection() {
             </div>
 
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-white leading-[1.1] mb-6">
-              A Spotless Home,{' '}
+              A Spotless Clean,{' '} 
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-primary-300">
                 Booked in 60 Seconds
               </span>

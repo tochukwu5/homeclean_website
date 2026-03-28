@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <defs>
+    <linearGradient id="fd" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1a3a8f"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="ft" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0097a7"/>
+      <stop offset="100%" stop-color="#00bcd4"/>
+    </linearGradient>
+    <linearGradient id="fm" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1565c0"/>
+      <stop offset="100%" stop-color="#1976d2"/>
+    </linearGradient>
+    <radialGradient id="fs" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="1"/>
+      <stop offset="40%" stop-color="#e3f2fd" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#1565c0" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="fg">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Top-bottom petals -->
+  <polygon points="50,2 56,46 50,50 44,46" fill="url(#fd)"/>
+  <polygon points="50,98 56,54 50,50 44,54" fill="url(#fd)"/>
+
+  <!-- Left-right petals -->
+  <polygon points="2,50 46,44 50,50 46,56" fill="url(#ft)"/>
+  <polygon points="98,50 54,44 50,50 54,56" fill="url(#ft)"/>
+
+  <!-- Diagonal petals -->
+  <polygon points="81,19 54,46 50,50 55,54" fill="url(#fm)"/>
+  <polygon points="19,19 46,46 50,50 45,54" fill="url(#fm)"/>
+  <polygon points="81,81 54,54 50,50 45,54" fill="url(#ft)" opacity="0.85"/>
+  <polygon points="19,81 46,54 50,50 55,54" fill="url(#ft)" opacity="0.85"/>
+
+  <!-- Center glow -->
+  <circle cx="50" cy="50" r="16" fill="url(#fs)" filter="url(#fg)"/>
+
+  <!-- Sparkle lines -->
+  <line x1="50" y1="36" x2="50" y2="64" stroke="white" stroke-width="1.5" stroke-linecap="round" opacity="0.95"/>
+  <line x1="36" y1="50" x2="64" y2="50" stroke="white" stroke-width="1.5" stroke-linecap="round" opacity="0.95"/>
+  <line x1="42" y1="42" x2="58" y2="58" stroke="white" stroke-width="0.9" stroke-linecap="round" opacity="0.65"/>
+  <line x1="58" y1="42" x2="42" y2="58" stroke="white" stroke-width="0.9" stroke-linecap="round" opacity="0.65"/>
+</svg>

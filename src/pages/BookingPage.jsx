@@ -51,7 +51,7 @@ export default function BookingPage() {
                   Our team is available Mon–Sat, 7am–7pm to assist you.
                 </p>
                 <a
-                  href="tel:0466096962"
+                  href="tel:+1466096962"
                   className="bg-white text-primary-600 font-semibold text-sm px-4 py-2.5 rounded-xl inline-block hover:bg-primary-50 transition-colors"
                 >
                   📞 Call Us Now

@@ -2,11 +2,11 @@ export const SITE = {
   name: 'Perth Kleeners',
   tagline: 'Your space, spotless.',
   // phone: '+2347088679581',
-  phone: '0466096962',
-  whatsapp: '0466096962',
+  phone: '+61 466 096 962',
+  whatsapp: '+61466096962',
   // email: 'tochukwud750@gmail.com',
   email: 'Osaz.ebez@hotmail.com',
-  address: '123 Sparkle Street, Clean City, CC 10001',
+  address: '13 Ginger Loop, Treeby WA 6164',
   hours: 'Mon–Sat: 7am – 7pm',
 }
 
@@ -44,7 +44,7 @@ export const SERVICES = [
   {
     id: 'movein',
     icon: '📦',
-    title: 'Move In / Move Out',
+    title: 'End of Lease Cleaning',
     description: 'Leave the old place spotless or arrive to a perfectly clean new home.',
     features: ['Full deep clean', 'Inside all cabinets', 'Appliance interiors', 'Wall spot cleaning', 'Bond-back guarantee'],
     price: 'From $220',
@@ -98,7 +98,7 @@ export const TESTIMONIALS = [
   {
     id: 1,
     name: 'Sarah M.',
-    location: 'Downtown',
+    // location: 'Downtown',
     rating: 5,
     text: 'Absolutely incredible service! They cleaned every corner of my apartment. I came home and it looked brand new. Booking took less than 2 minutes!',
     avatar: 'SM',
@@ -108,7 +108,7 @@ export const TESTIMONIALS = [
   {
     id: 2,
     name: 'James O.',
-    location: 'Westside',
+    // location: 'Westside',
     rating: 5,
     text: 'Used them for move-out cleaning and got my full bond back. Professional, punctual, and thorough. Will definitely use again for my new place.',
     avatar: 'JO',
@@ -118,7 +118,7 @@ export const TESTIMONIALS = [
   {
     id: 3,
     name: 'Priya K.',
-    location: 'Northbridge',
+    // location: 'Northbridge',
     rating: 5,
     text: 'I\'ve tried 3 cleaning companies before Perth Kleeners. None of them come close. The quote calculator was super easy and the cleaner was amazing.',
     avatar: 'PK',
@@ -128,7 +128,7 @@ export const TESTIMONIALS = [
   {
     id: 4,
     name: 'David L.',
-    location: 'Eastside',
+    // location: 'Eastside',
     rating: 5,
     text: 'Our office has never looked this clean. We have a weekly schedule now and the team is always consistent. Highly recommend for businesses!',
     avatar: 'DL',
@@ -138,7 +138,7 @@ export const TESTIMONIALS = [
   {
     id: 5,
     name: 'Fatima A.',
-    location: 'Southpark',
+    // location: 'Southpark',
     rating: 5,
     text: 'Booked same-day and the cleaner arrived exactly on time. She was so thorough with the kitchen — it literally sparkled. 10/10!',
     avatar: 'FA',
@@ -148,7 +148,7 @@ export const TESTIMONIALS = [
   {
     id: 6,
     name: 'Tom R.',
-    location: 'Riverside',
+    // location: 'Riverside',
     rating: 5,
     text: 'Post-renovation clean was exactly what we needed. All the construction dust is gone and the floors look incredible. Fast and affordable.',
     avatar: 'TR',
@@ -180,27 +180,6 @@ export const QUOTE_EXTRAS = [
   { id: 'cabinets', label: 'Inside Cabinets', price: 45, icon: '🗄️' },
 ]
 
-export const BEFORE_AFTER = [
-  {
-    id: 1,
-    room: 'Kitchen',
-    beforeBg: 'from-gray-400 to-gray-600',
-    afterBg: 'from-primary-400 to-primary-600',
-  },
-  {
-    id: 2,
-    room: 'Bathroom',
-    beforeBg: 'from-gray-400 to-gray-600',
-    afterBg: 'from-primary-400 to-primary-600',
-  },
-  {
-    id: 3,
-    room: 'Living Room',
-    beforeBg: 'from-gray-400 to-gray-600',
-    afterBg: 'from-primary-400 to-primary-600',
-  },
-]
-
 export const NAV_LINKS = [
   { label: 'Home', path: '/' },
   { label: 'Services', path: '/services' },
@@ -214,7 +193,7 @@ export const FOOTER_LINKS = {
     { label: 'home Cleaning', path: '/services' },
     { label: 'Deep Cleaning', path: '/services' },
     { label: 'Office Cleaning', path: '/services' },
-    { label: 'Move In/Out', path: '/services' },
+    { label: 'End of Lease Cleaning', path: '/services' },
     { label: 'Post-Construction', path: '/services' },
   ],
   company: [

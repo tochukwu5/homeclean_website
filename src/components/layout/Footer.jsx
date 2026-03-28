@@ -10,7 +10,7 @@ export default function Footer() {
         <div className="container-custom py-12 flex flex-col md:flex-row items-center justify-between gap-6">
           <div>
             <h3 className="text-2xl md:text-3xl font-heading font-bold text-white mb-1">
-              Ready for a spotless home?
+              Ready for a spotless Clean?
             </h3>
             <p className="text-primary-100 text-sm">Book today and get your first clean 15% off.</p>
           </div>
@@ -31,19 +31,21 @@ export default function Footer() {
           {/* Brand */}
           <div className="lg:col-span-1">
             <Link to="/" className="flex items-center gap-2.5 mb-4">
-              <div className="w-9 h-9 bg-primary-500 rounded-xl flex items-center justify-center text-white font-bold">P</div>
+              <div className="w-9 h-9 rounded-xl overflow-hidden shadow-glow group-hover:scale-105 transition-transform">
+  <img src="/favicon15.svg" alt="Perth Kleeners" className="w-full h-full object-contain" />
+</div>
               <span className="font-heading font-bold text-xl">Perth<span className="text-primary-400">Kleeners</span></span>
             </Link>
             <p className="text-gray-400 text-sm leading-relaxed mb-5">
               Professional cleaning services you can trust. Vetted cleaners, instant quotes, flexible bookings.
             </p>
-            <div className="flex gap-3">
+            {/* <div className="flex gap-3">
               {[FiInstagram, FiFacebook, FiTwitter].map((Icon, i) => (
                 <a key={i} href="#" className="w-9 h-9 bg-white/10 hover:bg-primary-500 rounded-lg flex items-center justify-center transition-colors">
                   <Icon size={16} />
                 </a>
               ))}
-            </div>
+            </div> */}
           </div>
 
           {/* Services */}

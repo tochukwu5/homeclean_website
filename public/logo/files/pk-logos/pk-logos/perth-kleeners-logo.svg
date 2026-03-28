@@ -1,0 +1,119 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 140" width="460" height="140">
+
+  <!-- White background -->
+  <rect width="460" height="140" fill="#ffffff"/>
+
+  <defs>
+    <!-- Dark green for top/bottom long petals -->
+    <linearGradient id="darkGreenV" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%"   stop-color="#1a5c2a"/>
+      <stop offset="50%"  stop-color="#2d7a3a"/>
+      <stop offset="100%" stop-color="#1a5c2a"/>
+    </linearGradient>
+
+    <!-- Teal for left/right long petals -->
+    <linearGradient id="tealH" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#007a6e"/>
+      <stop offset="50%"  stop-color="#00a896"/>
+      <stop offset="100%" stop-color="#007a6e"/>
+    </linearGradient>
+
+    <!-- Dark green diagonal petals -->
+    <linearGradient id="diagGreen1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"   stop-color="#1a5c2a"/>
+      <stop offset="100%" stop-color="#2d7a3a"/>
+    </linearGradient>
+    <linearGradient id="diagGreen2" x1="100%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%"   stop-color="#1a5c2a"/>
+      <stop offset="100%" stop-color="#2d7a3a"/>
+    </linearGradient>
+
+    <!-- Teal diagonal petals -->
+    <linearGradient id="diagTeal1" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#007a6e"/>
+      <stop offset="100%" stop-color="#00a896"/>
+    </linearGradient>
+    <linearGradient id="diagTeal2" x1="100%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%"   stop-color="#007a6e"/>
+      <stop offset="100%" stop-color="#00a896"/>
+    </linearGradient>
+
+    <!-- Center sparkle glow -->
+    <radialGradient id="centerGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"   stop-color="#ffffff" stop-opacity="1"/>
+      <stop offset="25%"  stop-color="#e0f5f0" stop-opacity="0.95"/>
+      <stop offset="60%"  stop-color="#a8ddd4" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#007a6e"  stop-opacity="0"/>
+    </radialGradient>
+
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="1.8" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- ══════════════════════════════════════════
+       8-POINTED STAR  —  centered at (70, 70)
+       Long axis: 62px   Short axis: 7px
+  ═══════════════════════════════════════════ -->
+
+  <!-- TOP petal (dark green) -->
+  <polygon points="70,8  76,65  70,70  64,65" fill="url(#darkGreenV)"/>
+  <!-- BOTTOM petal (dark green) -->
+  <polygon points="70,132 76,75  70,70  64,75" fill="url(#darkGreenV)"/>
+
+  <!-- LEFT petal (teal) -->
+  <polygon points="8,70  65,64  70,70  65,76" fill="url(#tealH)"/>
+  <!-- RIGHT petal (teal) -->
+  <polygon points="132,70 75,64 70,70  75,76" fill="url(#tealH)"/>
+
+  <!-- TOP-RIGHT diagonal (dark green) -->
+  <polygon points="114,26  74,66  70,70  75,74" fill="url(#diagGreen1)"/>
+  <!-- TOP-LEFT diagonal (dark green) -->
+  <polygon points="26,26   66,66  70,70  65,74" fill="url(#diagGreen2)"/>
+
+  <!-- BOTTOM-RIGHT diagonal (teal) -->
+  <polygon points="114,114  74,74  70,70  65,74" fill="url(#diagTeal1)"/>
+  <!-- BOTTOM-LEFT diagonal (teal) -->
+  <polygon points="26,114   66,74  70,70  75,74" fill="url(#diagTeal2)"/>
+
+  <!-- Center sparkle -->
+  <circle cx="70" cy="70" r="18" fill="url(#centerGlow)" filter="url(#softGlow)"/>
+
+  <!-- Sparkle bright cross -->
+  <line x1="70" y1="56" x2="70" y2="84" stroke="white" stroke-width="1.8" stroke-linecap="round" opacity="1"/>
+  <line x1="56" y1="70" x2="84" y2="70" stroke="white" stroke-width="1.8" stroke-linecap="round" opacity="1"/>
+  <!-- Sparkle diagonal rays -->
+  <line x1="61" y1="61" x2="79" y2="79" stroke="white" stroke-width="0.9" stroke-linecap="round" opacity="0.7"/>
+  <line x1="79" y1="61" x2="61" y2="79" stroke="white" stroke-width="0.9" stroke-linecap="round" opacity="0.7"/>
+
+  <!-- ══════════════════════════════════════════
+       TEXT  —  "Perth" + "Kleeners"
+  ═══════════════════════════════════════════ -->
+
+  <!-- "Perth" — bold dark green serif -->
+  <text
+    x="158"
+    y="68"
+    font-family="Georgia, 'Times New Roman', serif"
+    font-size="44"
+    font-weight="700"
+    fill="#1a5c2a"
+    letter-spacing="1"
+  >Perth</text>
+
+  <!-- "Kleeners" — bold teal serif -->
+  <text
+    x="158"
+    y="114"
+    font-family="Georgia, 'Times New Roman', serif"
+    font-size="44"
+    font-weight="700"
+    fill="#007a6e"
+    letter-spacing="1"
+  >Kleeners</text>
+
+</svg>

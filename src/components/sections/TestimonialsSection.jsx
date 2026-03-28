@@ -56,7 +56,7 @@ export default function TestimonialsSection() {
         {/* Bottom CTA */}
         <div className="mt-10 text-center">
           <p className="text-gray-500 text-sm mb-4">Join thousands of happy homeowners</p>
-          <div className="flex flex-wrap justify-center gap-4">
+          {/* <div className="flex flex-wrap justify-center gap-4">
             <a
               href="https://google.com"
               target="_blank"
@@ -73,7 +73,7 @@ export default function TestimonialsSection() {
             >
               <span className="text-lg">🔷</span> View Facebook Reviews
             </a>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

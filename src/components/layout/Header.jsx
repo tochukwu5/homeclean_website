@@ -4,6 +4,7 @@ import { Link, NavLink, useLocation } from 'react-router-dom'
 import { HiMenu, HiX } from 'react-icons/hi'
 import { FiPhone } from 'react-icons/fi'
 import { NAV_LINKS, SITE } from '../../data/siteData'
+// import logoIcon from '../img/favicon15.svg'
 
 // Drawer rendered via Portal — completely outside the header DOM tree
 function MobileDrawer({ open, onClose }) {
@@ -124,9 +125,9 @@ export default function Header() {
         <div className="container-custom flex items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2.5 group">
-            <div className="w-9 h-9 bg-primary-500 rounded-xl flex items-center justify-center text-white text-lg font-bold shadow-glow group-hover:scale-105 transition-transform">
-              P
-            </div>
+          <div className="w-9 h-9 rounded-xl overflow-hidden shadow-glow group-hover:scale-105 transition-transform">
+  <img src="/favicon15.svg" alt="Perth Kleeners" className="w-full h-full object-contain" />
+</div>
             <span className={`font-heading font-bold text-xl tracking-tight transition-colors ${
               scrolled || !isHome ? 'text-dark' : 'text-white'
             }`}>
