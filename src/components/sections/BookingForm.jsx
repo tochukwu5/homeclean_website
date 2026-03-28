@@ -34,55 +34,68 @@ export default function BookingForm({ prefillService = '', prefillPrice = '' }) 
     setStep(s => s + 1)
   }
 
-  // const handleSubmit = async (e) => {
-  //   e.preventDefault()
-  //   if (!form.name || !form.email || !form.phone || !form.address) {
-  //     toast.error('Please fill in all required fields.')
-  //     return
-  //   }
-  //   setLoading(true)
-  //   await new Promise(r => setTimeout(r, 1500))
-  //   setLoading(false)
-  //   setSubmitted(true)
-  //   toast.success('Booking confirmed! We\'ll be in touch shortly.')
-  // }
-
   const handleSubmit = async (e) => {
-  e.preventDefault()
-  setLoading(true)
-  try {
-    const res = await fetch('/api/booking', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(form),
-    })
-    const data = await res.json()
-    if (data.success) {
-      setLoading(true)
-      await new Promise(r => setTimeout(r, 1500))
-      setLoading(false)
-      setSubmitted(true)
-      toast.success('Booking confirmed! We\'ll be in touch shortly!.')     
-      setForm({ name: '', email: '', phone: '', message: '' })
-    } else {
-      toast.error(data.error || 'Something went wrong.')
+    e.preventDefault()
+
+    if (!form.name || !form.email || !form.phone || !form.address) {
+      toast.error('Please fill in all required fields.')
+      return
     }
-  } catch {
-    toast.error('Failed to send. Please try again.')
+
+    setLoading(true)
+
+    try {
+      // Format the date to a readable string before sending
+      const formattedDate = form.date?.toLocaleDateString('en-US', {
+        weekday: 'long',
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric',
+      })
+
+      const serviceTitle = SERVICES.find(s => s.id === form.service)?.title || form.service
+
+      const res = await fetch('/api/booking', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: form.name,
+          email: form.email,
+          phone: form.phone,
+          address: form.address,
+          service: serviceTitle,
+          date: formattedDate,
+          time: form.time,
+          notes: form.notes,
+        }),
+      })
+
+      const data = await res.json()
+
+      if (data.success) {
+        setSubmitted(true)
+        toast.success("Booking confirmed! We'll be in touch shortly.")
+      } else {
+        toast.error(data.error || 'Something went wrong. Please try again.')
+      }
+    } catch (err) {
+      toast.error('Failed to submit booking. Please check your connection and try again.')
+    }
+
+    setLoading(false)
   }
-  setLoading(false)
-}
 
- 
-
+  // ── Success screen ──
   if (submitted) {
     return (
       <div className="text-center py-16 px-6">
         <div className="text-6xl mb-4">🎉</div>
         <h3 className="text-2xl font-heading font-bold text-dark mb-2">Booking Confirmed!</h3>
-        <p className="text-gray-500 mb-2">Thanks, <strong>{form.name}</strong>! Your booking is received.</p>
+        <p className="text-gray-500 mb-2">
+          Thanks, <strong>{form.name}</strong>! Your booking is received.
+        </p>
         <p className="text-gray-500 text-sm mb-6">
-          We'll send a confirmation to <strong>{form.email}</strong> and call you on <strong>{form.phone}</strong> to confirm.
+          A confirmation has been sent to <strong>{form.email}</strong>. We'll also call you on <strong>{form.phone}</strong> to confirm.
         </p>
         <div className="inline-block bg-primary-50 rounded-2xl p-5 text-left mb-8 text-sm">
           <p className="font-semibold text-dark mb-3">Booking Summary</p>
@@ -123,7 +136,8 @@ export default function BookingForm({ prefillService = '', prefillPrice = '' }) 
       </div>
 
       <form onSubmit={handleSubmit}>
-        {/* Step 1: Service + Date */}
+
+        {/* ── Step 1: Service + Date + Time ── */}
         {step === 1 && (
           <div className="space-y-5">
             {/* Service */}
@@ -197,7 +211,7 @@ export default function BookingForm({ prefillService = '', prefillPrice = '' }) 
           </div>
         )}
 
-        {/* Step 2: Personal details */}
+        {/* ── Step 2: Personal Details ── */}
         {step === 2 && (
           <div className="space-y-5">
             <div className="grid sm:grid-cols-2 gap-4">
@@ -257,7 +271,7 @@ export default function BookingForm({ prefillService = '', prefillPrice = '' }) 
               />
             </div>
 
-            {/* Summary */}
+            {/* Booking Summary */}
             <div className="bg-primary-50 rounded-2xl p-4 text-sm">
               <p className="font-semibold text-dark mb-2">Booking Summary</p>
               <div className="space-y-1 text-gray-600 text-xs">
@@ -294,6 +308,7 @@ export default function BookingForm({ prefillService = '', prefillPrice = '' }) 
             </p>
           </div>
         )}
+
       </form>
     </div>
   )
