@@ -91,7 +91,7 @@ export default function AboutPage() {
       </section>
 
       {/* Team */}
-      <section className="section-padding bg-white">
+      {/* <section className="section-padding bg-white">
         <div className="container-custom">
           <div className="text-center mb-12">
             <SectionHeader
@@ -113,7 +113,7 @@ export default function AboutPage() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Trust */}
       <section className="section-padding bg-light">
