@@ -80,7 +80,7 @@ export default async function handler(req, res) {
   // to: YOUR email, content: customer details so you know who contacted you
   try {
     await resend.emails.send({
-      from: 'Perth Kleeners <onboarding@resend.dev>',
+      from: 'Perth Kleeners <hello@perthkleeners.com>',
       to: process.env.OWNER_EMAIL,
       subject: `📩 New Contact Message from ${name}`,
       html: `

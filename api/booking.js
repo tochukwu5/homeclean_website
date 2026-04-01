@@ -16,7 +16,7 @@ export default async function handler(req, res) {
   try {
     // Notify you (owner)
     await resend.emails.send({
-      from: 'Perth Kleeners <onboarding@resend.dev>',
+      from: 'Perth Kleeners <hello@perthkleeners.com>',
       to: process.env.OWNER_EMAIL,
       subject: `New Booking from ${name}`,
       html: `
