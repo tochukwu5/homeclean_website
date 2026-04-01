@@ -40,7 +40,7 @@ export default async function handler(req, res) {
 
     // Confirmation to customer
     await resend.emails.send({
-      from: 'Perth Kleeners <onboarding@resend.dev>',
+      from: 'Perth Kleeners <hello@perthkleeners.com>',
       to: email,
       subject: `Booking Confirmed — ${service}`,
       html: `

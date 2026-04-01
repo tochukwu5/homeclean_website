@@ -112,7 +112,7 @@ export default async function handler(req, res) {
   // NOTE: Only works after domain is verified on Resend
   try {
     await resend.emails.send({
-      from: 'Perth Kleeners <onboarding@resend.dev>',
+      from: 'Perth Kleeners <hello@perthkleeners.com>',
       to: email,
       subject: `Thanks for reaching out, ${name}! 🧹`,
       html: `
